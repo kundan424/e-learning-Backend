@@ -21,7 +21,6 @@ WORKDIR /app
 # Copy the built .jar file from the 'build' stage
 COPY --from=build /app/target/*.jar app.jar
 
-# This is the crucial part:
-# Render sets a $PORT environment variable. This command
+
 # tells Spring Boot to use that port instead of the default 8080.
 CMD ["java", "-jar", "-Dserver.port=${PORT}", "app.jar"]
