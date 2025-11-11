@@ -16,7 +16,7 @@ public class WebConfig {
                 registry.addMapping("/**") // allow all routes
                         .allowedOrigins(
                                 "http://localhost:5173",  // frontend during development
-                                "https://journal-frontend-0tg7.onrender.com" // your deployed frontend (later)
+                                "https://e-learning-frontend-vvnf.onrender.com" // your deployed frontend (later)
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
