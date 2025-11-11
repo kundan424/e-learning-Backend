@@ -1,6 +1,5 @@
 # --- 1. Build Stage ---
-# Use an official Maven image to build the app
-FROM maven:3.8-openjdk-21 AS build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 
 # Set the working directory
 WORKDIR /app
@@ -14,7 +13,6 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # --- 2. Run Stage ---
-# Use a lightweight, official Java image to run the app
 FROM eclipse-temurin:21-jre-alpine
 
 # Set the working directory
